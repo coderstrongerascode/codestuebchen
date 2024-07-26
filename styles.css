@@ -81,8 +81,8 @@ main {
     position: absolute;
     width: 100px;
     height: 100px;
-    background: white;
-    border: 1px solid black;
+    background: #ff6666; /* Hellrote Hintergrundfarbe für den Würfel */
+    border: 1px solid #d9534f; /* Roter Rand */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: flex;
