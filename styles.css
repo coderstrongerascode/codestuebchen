@@ -4,8 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #000; /* Hintergrundfarbe der Seite */
-    color: #fff; /* Textfarbe der Seite */
+    background-color: #fff; /* Hintergrundfarbe der Seite auf Weiß geändert */
+    color: #000; /* Textfarbe der Seite auf Schwarz geändert */
 }
 
 header {
@@ -49,12 +49,11 @@ header {
     color: #f1f1f1; /* Textfarbe beim Hover */
 }
 
-
 /* Hauptinhalt */
 main {
     margin-left: 250px; /* Platz für die Sidebar lassen */
     padding: 16px;
-    color: #fff; /* Textfarbe im Hauptinhalt */
+    color: #000; /* Textfarbe im Hauptinhalt auf Schwarz geändert */
 }
 
 /* Stile für das Würfel-Container */
@@ -210,13 +209,14 @@ main {
 
 .modal-content {
     background-color: #fff;
-	color: #000;
+    color: #000;
     margin: 5% auto;
     padding: 20px;
     border: 1px solid #888;
-     max-width: 500px; /* Maximalbreite des Modals */
+    max-width: 500px; /* Maximalbreite des Modals */
     position: relative; /* Position für Button */
 }
+
 button {
     background-color: #4CAF50;
     color: white;
@@ -228,7 +228,8 @@ button {
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-}-
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -291,8 +292,8 @@ input[type="number"] {
     margin: 8px 0;
     border: 1px solid #444;
     border-radius: 5px;
-    background-color: #222;
-    color: #fff;
+    background-color: #f9f9f9; /* Hintergrundfarbe auf hellgrau geändert */
+    color: #000;
     width: calc(100% - 20px); /* 100% minus Padding */
 }
 
@@ -340,11 +341,11 @@ button:hover {
     transform-style: preserve-3d;
     transition: transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
+
 #random-number-output {
     white-space: pre-line; /* Erlaubt Zeilenumbrüche innerhalb von Text */
     margin-top: 10px; /* Abstand oben, um die Ausgabe vom Rest der Seite zu trennen */
 }
-
 
 /* Stile für die Seiten des Würfels im Modal */
 .face.one {
@@ -365,4 +366,3 @@ button:hover {
 .face.six {
     transform: rotateX(-90deg) translateZ(50px);
 }
-
