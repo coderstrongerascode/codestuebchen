@@ -1,0 +1,368 @@
+/* Grundlegende Stile für die Seite */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000; /* Hintergrundfarbe der Seite */
+    color: #fff; /* Textfarbe der Seite */
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+/* Vertikale Navigation */
+.sidenav {
+    display: none;
+    background-color: #111; /* Hintergrundfarbe des Menüs */
+    overflow-x: hidden;
+    color: #fff; /* Textfarbe im Menü */
+    position: absolute;
+    width: 100%; /* Breite des Menüs */
+}
+
+.sidenav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181; /* Textfarbe der Links */
+    display: block;
+    transition: 0.3s;
+    text-align: left; /* Links ausrichten */
+}
+
+.sidenav a:hover {
+    color: #f1f1f1; /* Textfarbe beim Hover */
+}
+
+
+/* Hauptinhalt */
+main {
+    margin-left: 250px; /* Platz für die Sidebar lassen */
+    padding: 16px;
+    color: #fff; /* Textfarbe im Hauptinhalt */
+}
+
+/* Stile für das Würfel-Container */
+#dice-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    margin-top: 20px;
+    perspective: 1000px; /* Perspektive für 3D-Effekt */
+}
+
+/* Gemeinsame Stile für Würfel auf der Hauptseite und im Modal */
+.dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0) rotateY(0) rotateZ(0); /* Initiale Drehung */
+    transition: transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+/* Jede Seite des Würfels */
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: black;
+}
+
+/* Punkt-Positionen für jede Seite des Würfels */
+.pip {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+
+.face.one .pip1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.face.two .pip1 {
+    top: 10%;
+    left: 10%;
+}
+.face.two .pip2 {
+    bottom: 10%;
+    right: 10%;
+}
+
+.face.three .pip1 {
+    top: 10%;
+    left: 10%;
+}
+.face.three .pip2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.face.three .pip3 {
+    bottom: 10%;
+    right: 10%;
+}
+
+.face.four .pip1 {
+    top: 10%;
+    left: 10%;
+}
+.face.four .pip2 {
+    top: 10%;
+    right: 10%;
+}
+.face.four .pip3 {
+    bottom: 10%;
+    left: 10%;
+}
+.face.four .pip4 {
+    bottom: 10%;
+    right: 10%;
+}
+
+.face.five .pip1 {
+    top: 10%;
+    left: 10%;
+}
+.face.five .pip2 {
+    top: 10%;
+    right: 10%;
+}
+.face.five .pip3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.face.five .pip4 {
+    bottom: 10%;
+    left: 10%;
+}
+.face.five .pip5 {
+    bottom: 10%;
+    right: 10%;
+}
+
+.face.six .pip1 {
+    top: 10%;
+    left: 10%;
+}
+.face.six .pip2 {
+    top: 10%;
+    right: 10%;
+}
+.face.six .pip3 {
+    bottom: 10%;
+    left: 10%;
+}
+.face.six .pip4 {
+    bottom: 10%;
+    right: 10%;
+}
+.face.six .pip5 {
+    top: 40%;
+    left: 10%;
+}
+.face.six .pip6 {
+    top: 40%;
+    right: 10%;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+	color: #000;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+     max-width: 500px; /* Maximalbreite des Modals */
+    position: relative; /* Position für Button */
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}-
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Stile für den OK-Button im Modal */
+.ok-button {
+    background-color: #4CAF50; /* Grüner Hintergrund */
+    border: none; /* Keine Ränder */
+    color: white; /* Weißer Text */
+    padding: 10px 20px; /* Polsterung */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Kein Unterstreichen */
+    display: inline-block; /* Block-Element als Inline-Block */
+    font-size: 16px; /* Schriftgröße */
+    margin-top: 20px; /* Abstand oben */
+    cursor: pointer; /* Zeigerzeiger beim Hover */
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
+}
+
+.ok-button:hover {
+    background-color: #45a049; /* Dunklerer Grünton beim Hover */
+}
+
+#error-message {
+    display: block;
+    margin-bottom: 90px; /* Abstand unter der Fehlermeldung */
+}
+
+#error-ok-button {
+    background-color: #4CAF50; /* Grün */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0 auto; /* Zentriere den Button */
+    cursor: pointer;
+    position: absolute; /* Positioniere den Button am unteren Rand des Containers */
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Zentriere den Button horizontal */
+}
+
+/* Eingabefelder und Labels */
+input[type="number"] {
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #222;
+    color: #fff;
+    width: calc(100% - 20px); /* 100% minus Padding */
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    background-color: #4CAF50; /* Grüner Hintergrund */
+    border: none; /* Keine Ränder */
+    color: white; /* Weißer Text */
+    padding: 10px 20px; /* Polsterung */
+    text-align: center; /* Text zentrieren */
+    text-decoration: none; /* Kein Unterstreichen */
+    display: inline-block; /* Block-Element als Inline-Block */
+    font-size: 16px; /* Schriftgröße */
+    margin-top: 20px; /* Abstand oben */
+    cursor: pointer; /* Zeigerzeiger beim Hover */
+    border-radius: 5px; /* Abgerundete Ecken */
+    transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
+}
+
+button:hover {
+    background-color: #45a049; /* Dunklerer Grünton beim Hover */
+}
+
+/* Stile für den Würfel im Modal */
+#dice-modal-container {
+    display: flex;
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    height: 400px; /* Höhe des Containers */
+    margin: 0 auto; /* Zentrieren innerhalb des Modals */
+    perspective: 1000px; /* Perspektive für 3D-Effekt */
+}
+
+/* Stile für den Würfel im Modal */
+#modal-dice {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+#random-number-output {
+    white-space: pre-line; /* Erlaubt Zeilenumbrüche innerhalb von Text */
+    margin-top: 10px; /* Abstand oben, um die Ausgabe vom Rest der Seite zu trennen */
+}
+
+
+/* Stile für die Seiten des Würfels im Modal */
+.face.one {
+    transform: rotateY(0deg) translateZ(50px);
+}
+.face.two {
+    transform: rotateY(90deg) translateZ(50px);
+}
+.face.three {
+    transform: rotateY(180deg) translateZ(50px);
+}
+.face.four {
+    transform: rotateY(270deg) translateZ(50px);
+}
+.face.five {
+    transform: rotateX(90deg) translateZ(50px);
+}
+.face.six {
+    transform: rotateX(-90deg) translateZ(50px);
+}
+
