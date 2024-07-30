@@ -1,56 +1,33 @@
-<!-- random.html -->
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zufallszahlseite</title>
-    <link rel="stylesheet" href="stylesIndex.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles/stylesIndex.css">
 	<link rel="icon" href="/resources/icon/IconDice4.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Zufallszahlseite</h1>
+        <h1>Meldungen aus dem Alltag eines Programmierers</h1>
         <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
     </header>
     <nav id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="index.html">Home</a>
         <a href="dice.html">Würfelseite</a>
         <a href="random.html">Zufallszahlseite</a>
     </nav>
     <main>
-        <h1>Zufallszahlseite</h1>
-        <div>
-            <input type="number" id="lower-bound" placeholder="Untere Schranke" step="any" oninput="validateNumber(this)">
-            <input type="number" id="upper-bound" placeholder="Obere Schranke" step="any" oninput="validateNumber(this)">
-            <input type="number" id="num-numbers" placeholder="Anzahl der Zahlen" min="1" step="1">
-            <div>
-                <input type="checkbox" id="decimal-checkbox"> <label for="decimal-checkbox">Kommazahlen generieren</label>
-            </div>
-            <div>
-                <input type="checkbox" id="show-modal-checkbox"> <label for="show-modal-checkbox">Zahlen im POPup Fenster anzeigen</label>
-            </div>
-            <button onclick="generateRandomNumbers()">Generieren</button>
-            <p id="random-number-output"></p>
-        </div>
+        <h2>Herzlich Willkommen User.</h2>
+        <p>Hier können Sie sich mit Zufallszahlen sowie Standard-Würfeln austoben.</p>
+        <img id="randomImage" src="" alt="Zufälliges Bild">
+		
+		<h2>Zur Würfelseite<h2>
+		<a href="dice.html">Würfelseite</a>
+		<h2>Zur Zufallszahlenseite<h2>
+		<a href="random.html">Zufallszahlseite</a>
     </main>
-    <!-- Fehler-Modal -->
-    <div id="errorModal" class="modal">
-        <div class="modal-content">
-            <h2>ERROR</h2>
-            <span id="error-message"></span>
-            <button id="error-ok-button">OK</button>
-        </div>
-    </div>
-    <!-- Zahlen-Modal -->
-    <div id="numbersModal" class="modal">
-        <div class="modal-content">
-            <h2>Zufallszahlen</h2>
-            <span id="numbers-message"></span>
-            <button id="numbers-ok-button">OK</button>
-        </div>
-    </div>
-    <script src="scriptRandom.js"></script>
+    <script src="/js/scriptIndex.js"></script>
 </body>
 </html>
