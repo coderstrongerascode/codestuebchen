@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Bildpfad setzen
     
 	//const imagePath = `/${images[randomIndex]}`;
-	const imagePath = `resources/images/pic_${Math.floor(Math.random() * (9 - 1 +1)) +1}.png`;
+	const imagePath = `pic_${Math.floor(Math.random() * (9 - 1 +1)) +1}.png`;
 
     // Bild-Element finden und src setzen
     const imgElement = document.getElementById('randomImage');
