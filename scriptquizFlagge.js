@@ -13,7 +13,6 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.body.style.marginLeft = "0";
 }
-
 const flagImage = document.getElementById('flag-image');
 const nextButton = document.getElementById('next-button');
 const answerButtons = document.getElementById('answer-buttons');
