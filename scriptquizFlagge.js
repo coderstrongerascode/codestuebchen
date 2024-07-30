@@ -24,7 +24,7 @@ let score = 0;
 
 // Funktion zum Laden der Länder aus der .data-Datei
 async function loadCountries() {
-    const response = await fetch('leader.data');
+    const response = await fetch('leander.data');
     const text = await response.text();
     countries = text.trim().split('\n').map(line => line.trim());
 }
@@ -66,9 +66,10 @@ function showNextQuestion() {
         nextButton.classList.add('hide');
     } else {
         alert(`Quiz beendet! Deine Punktzahl: ${score}/${questions.length}`);
-        startGame(); // Startet das Quiz erneut
+        // Startet das Quiz nicht automatisch erneut, um das Endergebnis anzuzeigen.
     }
 }
+
 
 // Funktion zum Generieren der Antwortmöglichkeiten
 function generateOptions(correctAnswer) {
