@@ -25,9 +25,9 @@ let score = 0;
 
 // Funktion zum Laden der Länder aus der .data-Datei
 async function loadCountries() {
-    const response = await fetch('leander.data');
+    const response = await fetch('leader.data');
     const text = await response.text();
-    countries = text.trim().split('\n').map(line => line.trim());
+    countries = text.trim().split('::').map(line => line.trim());
 }
 
 // Funktion zum Starten des Spiels
