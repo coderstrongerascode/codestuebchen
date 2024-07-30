@@ -36,5 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Bild-Element finden und src setzen
     const imgElement = document.getElementById('randomImage');
-    imgElement.src = 'Pic_1.png';
+    imgElement.setAttribute('src', imagePath);
 });
