@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesquizFlagge.css">
+	<link rel="icon" href="IconDice4.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Meldungen aus dem Alltag eines Programmierers</h1>
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+    </header>
+    <nav id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="dice.html">Würfelseite</a>
+        <a href="random.html">Zufallszahlseite</a>
+		<a href="quizHauptstadt.html">Hauptstädte erraten</a>
+		<a href="quizFlagge.html">Land erraten, aus Flagge</a>
+    </nav>
+    <main>
+        <h2>Herzlich Willkommen User.</h2>
+        <p>Hier können Sie sich mit Zufallszahlen sowie Standard-Würfeln austoben.</p>
+        <img id="randomImage" src="" alt="Zufälliges Bild">
+		
+		<h2>Zur Würfelseite<h2>
+		<a href="dice.html">Würfelseite</a>
+		<h2>Zur Zufallszahlenseite<h2>
+		<a href="random.html">Zufallszahlseite</a>
+
+        <div class="container">
+            <h1>Flaggen-Quiz</h1>
+            <img id="flag-image" src="" alt="Flagge">
+            <div id="answer-buttons" class="btn-container"></div>
+            <button id="next-button" class="btn hide">Nächste Frage</button>
+        </div>
+    </main>
+    <script src="scriptquizFlagge.js"></script>
+</body>
+</html>
