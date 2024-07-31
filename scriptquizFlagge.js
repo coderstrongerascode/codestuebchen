@@ -16,7 +16,7 @@ async function loadQuestions() {
     for (const line of lines) {
         const [correctAnswer, ...options] = line.split('::');
         questions.push({
-            flag: `flags/${correctAnswer.toLowerCase()}.png`, // Flaggen-Dateiname basierend auf der Antwort
+            flag: `${correctAnswer.toLowerCase()}.png`, // Flaggen-Dateiname basierend auf der Antwort
             correctAnswer,
             options: shuffleArray([correctAnswer, ...options])
         });
