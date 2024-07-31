@@ -13,6 +13,7 @@ function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.body.style.marginLeft = "0";
 }
+
 const flagImage = document.getElementById('flag-image');
 const nextButton = document.getElementById('next-button');
 const answerButtons = document.getElementById('answer-buttons');
@@ -21,23 +22,11 @@ let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-// Funktion zum Laden der Fragen und Antwortmöglichkeiten
+// Funktion zum Laden von Daten aus einer JSON-Datei
 async function loadQuestions() {
-    const response = await fetch('leander.data');
-    const text = await response.text();
-    const lines = text.trim().split('\n');
-    const questions = [];
-
-    for (const line of lines) {
-        const [correctAnswer, ...options] = line.split('::');
-        questions.push({
-            flag: `flags/${correctAnswer.toLowerCase()}.png`, // Flaggen-Dateiname basierend auf der Antwort
-            correctAnswer,
-            options: shuffleArray([correctAnswer, ...options])
-        });
-    }
-
-    return questions;
+    const response = await fetch('question.json');
+    const data = await response.json();
+    return data;
 }
 
 // Funktion zum Starten des Spiels
@@ -54,13 +43,28 @@ async function startGame() {
 function showQuestion(question) {
     flagImage.src = question.flag;
     answerButtons.innerHTML = '';
-    question.options.forEach(option => {
+    const options = generateOptions(question.correctAnswer);
+    options.forEach(option => {
         const button = document.createElement('button');
         button.innerText = option;
         button.classList.add('btn');
         button.addEventListener('click', () => selectAnswer(button, option, question.correctAnswer));
         answerButtons.appendChild(button);
     });
+}
+
+// Funktion zur Generierung der Antwortmöglichkeiten
+function generateOptions(correctAnswer) {
+    // Mische die Fragen, um die Antwortmöglichkeiten zu generieren
+    const allCountries = questions.map(q => q.correctAnswer);
+    const options = new Set([correctAnswer]);
+    
+    while (options.size < 4) {
+        const randomCountry = allCountries[Math.floor(Math.random() * allCountries.length)];
+        options.add(randomCountry);
+    }
+
+    return Array.from(options).sort(() => Math.random() - 0.5);
 }
 
 // Funktion zur Auswahl der Antwort
