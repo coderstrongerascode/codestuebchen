@@ -14,7 +14,7 @@ function closeNav() {
     document.body.style.marginLeft = "0";
 }
 
-const questionContainer = document.getElementById('question-container');
+/*const questionContainer = document.getElementById('question-container');
 const nextButton = document.getElementById('next-button');
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
@@ -110,5 +110,97 @@ nextButton.addEventListener('click', () => {
     }
 });
 
+startGame();*/
+const flagImage = document.getElementById('flag-image');
+const nextButton = document.getElementById('next-button');
+const answerButtons = document.getElementById('answer-buttons');
+
+let countries = [];
+let capitals = {};
+let currentQuestion = {};
+let score = 0;
+
+// Funktion zum Laden der Länder und Hauptstädte
+async function loadCapitals() {
+    const response = await fetch('hauptstaedte.json');
+    capitals = await response.json();
+    countries = Object.keys(capitals);
+}
+
+// Funktion zum Starten des Spiels
+async function startGame() {
+    await loadCapitals();
+    score = 0;
+    nextButton.classList.add('hide');
+    showNextQuestion();
+}
+
+// Funktion zum Anzeigen der nächsten Frage
+function showNextQuestion() {
+    const correctCountry = getRandomCountry();
+    const flagFileName = `${correctCountry.toLowerCase()}.png`;
+    flagImage.src = `/${flagFileName}`;
+
+    currentQuestion = {
+        correctCountry,
+        options: generateOptions(correctCountry)
+    };
+
+    answerButtons.innerHTML = '';
+    currentQuestion.options.forEach(option => {
+        const button = document.createElement('button');
+        button.innerText = option;
+        button.classList.add('btn');
+        button.addEventListener('click', () => selectAnswer(button, option));
+        answerButtons.appendChild(button);
+    });
+
+    nextButton.classList.add('hide');
+}
+
+// Funktion zum Generieren der Antwortmöglichkeiten
+function generateOptions(correctCountry) {
+    const correctAnswer = capitals[correctCountry];
+    const options = new Set([correctAnswer]);
+
+    while (options.size < 4) {
+        const randomCountry = getRandomCountry();
+        options.add(capitals[randomCountry]);
+    }
+
+    return Array.from(options).sort(() => Math.random() - 0.5);
+}
+
+// Funktion zum Abrufen eines zufälligen Landes
+function getRandomCountry() {
+    return countries[Math.floor(Math.random() * countries.length)];
+}
+
+// Funktion zur Auswahl der Antwort
+function selectAnswer(button, selectedAnswer) {
+    const correct = selectedAnswer === capitals[currentQuestion.correctCountry];
+    if (correct) {
+        score++;
+        button.style.backgroundColor = 'green';
+    } else {
+        button.style.backgroundColor = 'red';
+        // Highlight the correct answer
+        Array.from(answerButtons.children).forEach(btn => {
+            if (btn.innerText === capitals[currentQuestion.correctCountry]) {
+                btn.style.backgroundColor = 'green';
+            }
+        });
+    }
+    Array.from(answerButtons.children).forEach(btn => {
+        btn.disabled = true;
+    });
+    nextButton.classList.remove('hide');
+}
+
+// Event-Handler für den Nächsten-Button
+nextButton.addEventListener('click', showNextQuestion);
+
+// Starte das Spiel
 startGame();
+
 
