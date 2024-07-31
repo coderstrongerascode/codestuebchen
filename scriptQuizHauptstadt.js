@@ -111,7 +111,7 @@ nextButton.addEventListener('click', () => {
 });
 
 startGame();*/
-const flagImage = document.getElementById('flag-image');
+const questionElement = document.getElementById('question');
 const nextButton = document.getElementById('next-button');
 const answerButtons = document.getElementById('answer-buttons');
 
@@ -138,13 +138,13 @@ async function startGame() {
 // Funktion zum Anzeigen der nächsten Frage
 function showNextQuestion() {
     const correctCountry = getRandomCountry();
-    const flagFileName = `${correctCountry.toLowerCase()}.png`;
-    flagImage.src = `/${flagFileName}`;
 
     currentQuestion = {
         correctCountry,
         options: generateOptions(correctCountry)
     };
+
+    questionElement.innerText = `Was ist die Hauptstadt von ${correctCountry}?`;
 
     answerButtons.innerHTML = '';
     currentQuestion.options.forEach(option => {
@@ -202,5 +202,6 @@ nextButton.addEventListener('click', showNextQuestion);
 
 // Starte das Spiel
 startGame();
+
 
 
