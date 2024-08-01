@@ -29,12 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Zufälligen Index wählen
     const randomIndex = Math.floor(Math.random() * images.length);
 
-    // Bildpfad setzen
+    // Bildpfad setzen aber nicht über arrsy
     
 	//const imagePath = `/${images[randomIndex]}`;
-	const imagePath = `resources/images/pic_${Math.floor(Math.random() * (9 - 1 +1)) +1}.png`;
+	const imagePath = `resources/images/Pic_${Math.floor(Math.random() * (9 - 1 +1)) +1}.png`;
 
     // Bild-Element finden und src setzen
     const imgElement = document.getElementById('randomImage');
-    imgElement.src = imagePath;
+    imgElement.setAttribute('src', imagePath);
 });
