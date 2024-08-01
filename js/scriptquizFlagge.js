@@ -41,7 +41,7 @@ async function startGame() {
 
 // Funktion zum Anzeigen der Frage
 function showQuestion(question) {
-    flagImage.src = question.flag;
+    flagImage.src = '/flags/' + question.flag;
     answerButtons.innerHTML = '';
     const options = generateOptions(question.correctAnswer);
     options.forEach(option => {
