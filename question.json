@@ -1,18 +1,18 @@
 [
     {
-        "flag": "afghanistan.png",
+        "flag": "flags/afghanistan.png",
         "correctAnswer": "Afghanistan"
     },
     {
-        "flag": "ägypten.png",
+        "flag": "flags/ägypten.png",
         "correctAnswer": "Ägypten"
     },
     {
-        "flag": "albanien.png",
+        "flag": "flags/albanien.png",
         "correctAnswer": "Albanien"
     },
     {
-        "flag": "algerien.png",
+        "flag": "flags/algerien.png",
         "correctAnswer": "Algerien"
     }
 ]
