@@ -1,0 +1,44 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="stylesheet" href="styles/stylesHangman.css">
+	<link rel="icon" href="IconDice4.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Hangman spielen</h1>
+        <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+    </header>
+    <nav id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Home</a>
+        <a href="dice.html">Würfelseite</a>
+        <a href="random.html">Zufallszahlseite</a>
+		<a href="quizHauptstadt.html">Hauptstädte erraten</a>
+        <a href="quizFlagge.html">Land erraten, aus Flagge</a>
+        <a href="hangman.html">Hangman</a>
+    </nav>
+    <main>
+        <div id="game-container">
+            <h1>Hangman</h1>
+            <p id="word-display">_ _ _ _ _</p>
+            <p>Guess a letter:</p>
+            <input type="text" id="letter-input" maxlength="1">
+            <button id="guess-button">Guess</button>
+            <p id="message"></p>
+            <p>Guessed letters: <span id="guessed-letters"></span></p>
+            <p>Remaining attempts: <span id="attempts">6</span></p>
+            <canvas id="hangman-canvas" width="200" height="200"></canvas>
+        </div>
+		<h2>Zur Würfelseite<h2>
+		<a href="dice.html">Würfelseite</a>
+		<h2>Zur Zufallszahlenseite<h2>
+		<a href="random.html">Zufallszahlseite</a>
+    </main>
+    <script src="js/scriptHangman.js"></script>
+</body>
+</html>
