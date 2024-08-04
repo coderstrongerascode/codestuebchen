@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     background-color: #fff;
     color: #000;
+    transition: margin-left 0.3s;
 }
 
 header {
@@ -56,11 +57,17 @@ header {
 
 /* Hauptinhalt */
 main {
-    margin-left: 250px;
+    margin-left: 0;
     padding: 16px;
+    transition: margin-left 0.3s;
     color: #000;
 }
 
+main h2, main p, main img, main a {
+    text-align: left;
+}
+
+/* Responsive Anpassungen */
 @media screen and (max-width: 600px) {
     .sidenav {
         width: 100%;
@@ -74,4 +81,13 @@ main {
     main {
         margin-left: 0;
     }
+}
+
+/* Menü geöffnet */
+body.menu-open .sidenav {
+    display: block;
+}
+
+body.menu-open main {
+    margin-left: 250px;
 }
