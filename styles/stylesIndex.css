@@ -28,7 +28,6 @@ header {
 
 /* Vertikale Navigation */
 .sidenav {
-    display: none;
     background-color: #111;
     overflow-x: hidden;
     color: #fff;
@@ -39,6 +38,8 @@ header {
     left: 0;
     z-index: 2;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .sidenav a {
