@@ -1,16 +1,22 @@
 // Funktion zum Öffnen der Sidebar
 function toggleNav() {
+    var sidenav = document.getElementById("mySidenav");
     var body = document.body;
-    if (body.classList.contains("menu-open")) {
+    if (sidenav.style.display === "block") {
+        sidenav.style.display = "none";
         body.classList.remove("menu-open");
     } else {
+        sidenav.style.display = "block";
         body.classList.add("menu-open");
     }
 }
 
 // Funktion zum Schließen der Sidebar
 function closeNav() {
-    document.body.classList.remove("menu-open");
+    var sidenav = document.getElementById("mySidenav");
+    var body = document.body;
+    sidenav.style.display = "none";
+    body.classList.remove("menu-open");
 }
 
 // Funktion zum Laden eines zufälligen Bildes
