@@ -4,9 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #fff;
-    color: #000;
-    transition: margin-left 0.3s;
+    background-color: #fff; /* Hintergrundfarbe der Seite auf Weiß geändert */
+    color: #000; /* Textfarbe der Seite auf Schwarz geändert */
 }
 
 header {
@@ -29,65 +28,39 @@ header {
 /* Vertikale Navigation */
 .sidenav {
     display: none;
-    background-color: #111;
+    background-color: #111; /* Hintergrundfarbe des Menüs */
     overflow-x: hidden;
-    color: #fff;
-    position: fixed;
-    width: 250px;
-    height: 100%;
+    color: #fff; /* Textfarbe im Menü */
+    position: absolute;
+    width: 250px; /* Breite des Menüs */
+    height: 100%; /* Höhe des Menüs */
     top: 0;
     left: 0;
     z-index: 2;
-    transition: 0.3s;
+    transition: 0.3s; /* Animation für das Öffnen und Schließen */
 }
 
 .sidenav a {
     padding: 8px 16px;
     text-decoration: none;
     font-size: 20px;
-    color: #818181;
+    color: #818181; /* Textfarbe der Links */
     display: block;
     transition: 0.3s;
-    text-align: left;
+    text-align: left; /* Links ausrichten */
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #f1f1f1; /* Textfarbe beim Hover */
 }
 
 /* Hauptinhalt */
 main {
-    margin-left: 0;
+    margin-left: 250px; /* Platz für die Sidebar lassen */
     padding: 16px;
-    transition: margin-left 0.3s;
-    color: #000;
+    color: #000; /* Textfarbe im Hauptinhalt auf Schwarz geändert */
 }
 
 main h2, main p, main img, main a {
     text-align: left;
-}
-
-/* Responsive Anpassungen */
-@media screen and (max-width: 600px) {
-    .sidenav {
-        width: 100%;
-        height: auto;
-        position: relative;
-    }
-    .sidenav a {
-        float: left;
-        padding: 15px;
-    }
-    main {
-        margin-left: 0;
-    }
-}
-
-/* Menü geöffnet */
-body.menu-open .sidenav {
-    display: block;
-}
-
-body.menu-open main {
-    margin-left: 250px;
 }
