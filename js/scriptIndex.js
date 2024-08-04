@@ -10,7 +10,7 @@ function toggleNav() {
 
 // Funktion zum Schließen der Sidebar
 function closeNav() {
-    document.body.classList.remove("menu-open");
+    document.getElementById("mySidenav").style.display = "none";
 }
 
 // Funktion zum Laden eines zufälligen Bildes
