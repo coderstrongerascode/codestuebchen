@@ -31,7 +31,6 @@ function toggleQuizMenu() {
         arrow.classList.add('down');
     }
 }
-
 // Funktion zum Laden eines zufälligen Bildes
 document.addEventListener('DOMContentLoaded', () => {
     // Array mit den Bild-Dateinamen

@@ -57,7 +57,7 @@ header {
     color: #f1f1f1;
 }
 
-* Untermenü für Quizze */
+/* Untermenü für Quizze */
 .submenu {
     display: none;
     flex-direction: column;
@@ -75,6 +75,7 @@ header {
     transition: transform 0.3s;
 }
 
+/* Pfeil nach unten (Standardzustand) */
 .arrow.down {
     transform: rotate(90deg);
 }
