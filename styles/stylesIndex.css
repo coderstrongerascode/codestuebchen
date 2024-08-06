@@ -57,7 +57,7 @@ header {
     color: #f1f1f1;
 }
 
-/* Untermenü für Quizze */
+* Untermenü für Quizze */
 .submenu {
     display: none;
     flex-direction: column;
@@ -66,6 +66,17 @@ header {
 
 .sidenav .submenu a {
     font-size: 18px;
+}
+
+/* Arrow Icon for collapsible menu */
+.arrow {
+    font-size: 16px;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.arrow.down {
+    transform: rotate(90deg);
 }
 
 /* Hauptinhalt */
