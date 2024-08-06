@@ -57,6 +57,17 @@ header {
     color: #f1f1f1;
 }
 
+/* Untermenü für Quizze */
+.submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 20px; /* Indent the submenu items */
+}
+
+.sidenav .submenu a {
+    font-size: 18px;
+}
+
 /* Hauptinhalt */
 main {
     margin-left: 0;

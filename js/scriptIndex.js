@@ -19,6 +19,16 @@ function closeNav() {
     body.classList.remove("menu-open");
 }
 
+// Funktion zum Ein- und Ausklappen des Quiz-Menüs
+function toggleQuizMenu() {
+    var quizMenu = document.getElementById("quizMenu");
+    if (quizMenu.style.display === "block") {
+        quizMenu.style.display = "none";
+    } else {
+        quizMenu.style.display = "block";
+    }
+}
+
 // Funktion zum Laden eines zufälligen Bildes
 document.addEventListener('DOMContentLoaded', () => {
     // Array mit den Bild-Dateinamen
