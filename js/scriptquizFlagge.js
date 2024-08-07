@@ -1,17 +1,35 @@
 // Funktion zum Öffnen der Sidebar
 function toggleNav() {
-    var nav = document.getElementById("mySidenav");
-    if (nav.style.display === "block") {
-        nav.style.display = "none";
+    var sidenav = document.getElementById("mySidenav");
+    var body = document.body;
+    if (sidenav.style.display === "block") {
+        sidenav.style.display = "none";
+        body.classList.remove("menu-open");
     } else {
-        nav.style.display = "block";
+        sidenav.style.display = "block";
+        body.classList.add("menu-open");
     }
 }
 
 // Funktion zum Schließen der Sidebar
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.body.style.marginLeft = "0";
+    var sidenav = document.getElementById("mySidenav");
+    var body = document.body;
+    sidenav.style.display = "none";
+    body.classList.remove("menu-open");
+}
+
+// Funktion zum Ein- und Ausklappen des Quiz-Menüs
+function toggleQuizMenu() {
+    var quizMenu = document.getElementById("quizMenu");
+    var arrow = document.querySelector('.arrow');
+    if (quizMenu.style.display === "block") {
+        quizMenu.style.display = "none";
+        arrow.classList.remove('down');
+    } else {
+        quizMenu.style.display = "block";
+        arrow.classList.add('down');
+    }
 }
 
 const flagImage = document.getElementById('flag-image');

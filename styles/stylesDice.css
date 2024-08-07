@@ -292,11 +292,39 @@ header {
     color: #f1f1f1; /* Textfarbe beim Hover */
 }
 
+/* Untermenü für Quizze */
+.submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 20px; /* Indent the submenu items */
+}
+
+.sidenav .submenu a {
+    font-size: 18px;
+}
+
+/* Arrow Icon for collapsible menu */
+.arrow {
+    font-size: 16px;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+/* Pfeil nach unten (Standardzustand) */
+.arrow.down {
+    transform: rotate(90deg);
+}
+
 /* Hauptinhalt */
 main {
-    margin-left: 250px; /* Platz für die Sidebar lassen */
+    margin-left: 0;
     padding: 16px;
-    color: #000; /* Textfarbe im Hauptinhalt auf Schwarz geändert */
+    transition: margin-left 0.3s;
+    color: #000;
+}
+
+main h2, main p, main img, main a {
+    text-align: left;
 }
 
 /* Button */
@@ -317,4 +345,13 @@ button {
 
 button:hover {
     background-color: #45a049; /* Dunklerer Grünton beim Hover */
+}
+
+/* Menü geöffnet */
+body.menu-open .sidenav {
+    display: block;
+}
+
+body.menu-open main {
+    margin-left: 250px;
 }
