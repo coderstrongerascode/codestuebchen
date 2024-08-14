@@ -1,0 +1,15 @@
+{
+    "pageTitle": "Messages from a Programmer's Daily Life",
+    "languageLabel": "Select Language:",
+    "homeLink": "Home",
+    "diceLink": "Dice Page",
+    "randomLink": "Random Number Page",
+    "allQuizzesLink": "All Quizzes",
+    "quizCapitalLink": "Guess the Capital",
+    "quizFlagLink": "Guess the Country by Flag",
+    "hangmanLink": "Hangman",
+    "welcomeMessage": "Welcome User.",
+    "description": "Here you can play with random numbers and standard dice.",
+    "toDicePage": "To Dice Page",
+    "toRandomPage": "To Random Number Page"
+}

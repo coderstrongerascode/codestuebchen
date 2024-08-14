@@ -11,31 +11,37 @@
     <header>
         <h1>Meldungen aus dem Alltag eines Programmierers</h1>
         <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+        <div class="language-selector">
+            <label for="languageSelector" id="languageLabel">Sprache auswählen:</label>
+            <select id="languageSelector">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
     </header>
     <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="dice.html">Würfelseite</a>
-        <a href="random.html">Zufallszahlseite</a>
-        <a href="javascript:void(0)" onclick="toggleQuizMenu()">Alle Quizze <span class="arrow">&#9662;</span></a>
+        <a href="index.html" id="homeLink">Home</a>
+        <a href="dice.html" id="diceLink">Würfelseite</a>
+        <a href="random.html" id="randomLink">Zufallszahlseite</a>
+        <a href="javascript:void(0)" onclick="toggleQuizMenu()" id="allQuizzesLink">Alle Quizze <span class="arrow">&#9662;</span></a>
         <div id="quizMenu" class="submenu">
-            <a href="quizHauptstadt.html">  Hauptstädte erraten</a>
-            <a href="quizFlagge.html">  Land erraten, aus Flagge</a>
+            <a href="quizHauptstadt.html" id="quizCapitalLink">Hauptstädte erraten</a>
+            <a href="quizFlagge.html" id="quizFlagLink">Land erraten, aus Flagge</a>
         </div>
-        <a href="hangman.html">Hangman</a>
-        <a href="quizHauptstadt.html">Hauptstädte erraten</a>
-        <a href="quizFlagge.html">Land erraten, aus Flagge</a>
-        <a href="hangman.html">Hangman</a>
+        <a href="hangman.html" id="hangmanLink">Hangman</a>
+        <a href="quizHauptstadt.html" id="quizCapitalLink">Hauptstädte erraten</a>
+        <a href="quizFlagge.html" id="quizFlagLink">Land erraten, aus Flagge</a>
+        <a href="hangman.html" id="hangmanLink">Hangman</a>
     </nav>
     <main id="mainContent">
-        <h2>Herzlich Willkommen User.</h2>
-        <p>Hier können Sie sich mit Zufallszahlen sowie Standard-Würfeln austoben.</p>
+        <h2 id="welcomeMessage">Herzlich Willkommen User.</h2>
+        <p id="description">Hier können Sie sich mit Zufallszahlen sowie Standard-Würfeln austoben.</p>
         <img id="randomImage" src="" alt="Zufälliges Bild">
         
-        <h2>Zur Würfelseite</h2>
-        <a href="dice.html">Würfelseite</a>
-        <h2>Zur Zufallszahlenseite</h2>
-        <a href="random.html">Zufallszahlseite</a>
+        <h2 id="toDicePage">Zur Würfelseite</h2>
+        <a href="dice.html" id="dicePageLink">Würfelseite</a>
+        <h2 id="toRandomPage">Zur Zufallszahlenseite</h2>
+        <a href="random.html" id="randomPageLink">Zufallszahlseite</a>
     </main>
     <script src="js/scriptIndex.js"></script>
 </body>
