@@ -31,11 +31,12 @@ function toggleQuizMenu() {
         arrow.classList.add('down');
     }
 }
+
 // Funktion zum Laden eines zufälligen Bildes
 document.addEventListener('DOMContentLoaded', () => {
     // Array mit den Bild-Dateinamen
     const images = [
-       'resources/images/pic_1.png',
+        'resources/images/pic_1.png',
         'resources/images/pic_2.png',
         'resources/images/pic_3.png',
         'resources/images/pic_4.png',
@@ -104,3 +105,6 @@ function loadLanguage() {
     }
     fetchLanguageContent(currentLanguage);
 }
+
+
+
