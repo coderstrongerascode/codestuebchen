@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Sprachumschaltung und Laden der Inhalte
 function loadLanguage() {
     const languageSelector = document.getElementById("languageSelector");
-    let currentLanguage = 'de'; // Standardmäßig auf Deutsch
+    let currentLanguage = 'en'; // Standardmäßig auf Deutsch
 
     function switchLanguage(language) {
         currentLanguage = language;
