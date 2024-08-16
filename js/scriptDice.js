@@ -99,7 +99,7 @@ function loadLanguage() {
     }
 
     function fetchLanguageContent(language) {
-        fetch(`resources/language/dice/1dice/${language}.json`)
+        fetch(`resources/language/dice/onedice/${language}.json`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById('title').textContent = data.title;
