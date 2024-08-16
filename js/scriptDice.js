@@ -111,7 +111,7 @@ function loadLanguage() {
                 document.getElementById('quizCapitalLink').textContent = data.quizCapitalLink;
                 document.getElementById('quizFlagLink').textContent = data.quizFlagLink;
                 document.getElementById('hangmanLink').textContent = data.hangmanLink;
-                document.getElementById('showmodaldicecheckbox').textContent = data.showmodaldicecheckbox;
+                document.getElementById('show-modal-dice-checkbox').textContent = data.showmodaldicecheckbox;
                 document.getElementById('rollDiceButton').textContent = data.rollDiceButton;
                 document.getElementById('modalTitle').textContent = data.modalTitle;
                 document.getElementById('modalOkButton').textContent = data.modalOkButton;
