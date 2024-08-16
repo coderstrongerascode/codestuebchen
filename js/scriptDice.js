@@ -45,7 +45,7 @@ function closeModal() {
 function rollDice() {
     const dice = document.getElementById('dice');
     const modalDice = document.getElementById('modal-dice');
-    const showInModal = document.getElementById('show-modal-dice-checkbox').checked; // Neue Checkbox
+    const showInModal = document.getElementById('showmodaldicecheckbox').checked; // Neue Checkbox
 
     // Zufällige Rotation für den Würfel
     const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
@@ -81,7 +81,7 @@ function getDiceResult(x, y, z) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.getElementById('show-modal-dice-checkbox').checked = true;
+	document.getElementById('showmodaldicecheckbox').checked = true;
 
     // Sprachinhalt laden
     loadLanguage();
@@ -111,7 +111,7 @@ function loadLanguage() {
                 document.getElementById('quizCapitalLink').textContent = data.quizCapitalLink;
                 document.getElementById('quizFlagLink').textContent = data.quizFlagLink;
                 document.getElementById('hangmanLink').textContent = data.hangmanLink;
-                document.getElementById('show-modal-dice-checkbox').textContent = data.showmodaldicecheckbox;
+                document.getElementById('showmodaldicecheckbox').textContent = data.showmodaldicecheckbox;
                 document.getElementById('rollDiceButton').textContent = data.rollDiceButton;
                 document.getElementById('modalTitle').textContent = data.modalTitle;
                 document.getElementById('modalOkButton').textContent = data.modalOkButton;
