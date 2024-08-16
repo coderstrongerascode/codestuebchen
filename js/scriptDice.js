@@ -21,7 +21,7 @@ function closeNav() {
 
 // Funktion zum Ein- und Ausklappen des Quiz-Menüs
 function toggleQuizMenu() {
-    var quizMenu = document.getElementById("quizMenu");
+    var quizMenu = document.getElementById("allQuizzesLink");
     var arrow = document.querySelector('.arrow');
     if (quizMenu.style.display === "block") {
         quizMenu.style.display = "none";
