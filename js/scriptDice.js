@@ -104,13 +104,14 @@ function loadLanguage() {
             .then(data => {
                 document.getElementById('title').textContent = data.title;
                 document.getElementById('headerTitle').textContent = data.headerTitle;
+                document.getElementById("languageLabel").textContent = data.languageLabel;
                 document.getElementById('homeLink').textContent = data.homeLink;
                 document.getElementById('diceLink').textContent = data.diceLink;
                 document.getElementById('randomLink').textContent = data.randomLink;
                 document.getElementById('quizCapitalLink').textContent = data.quizCapitalLink;
                 document.getElementById('quizFlagLink').textContent = data.quizFlagLink;
                 document.getElementById('hangmanLink').textContent = data.hangmanLink;
-                document.getElementById('show-modal-dice-checkbox').textContent = data.showmodaldicecheckbox;
+                document.getElementById('showmodaldicecheckbox').textContent = data.showmodaldicecheckbox;
                 document.getElementById('rollDiceButton').textContent = data.rollDiceButton;
                 document.getElementById('modalTitle').textContent = data.modalTitle;
                 document.getElementById('modalOkButton').textContent = data.modalOkButton;
