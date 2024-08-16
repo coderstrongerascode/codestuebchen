@@ -82,4 +82,52 @@ function getDiceResult(x, y, z) {
 
 document.addEventListener('DOMContentLoaded', () => {
 	document.getElementById('show-modal-dice-checkbox').checked = true;
+
+    // Sprachinhalt laden
+    loadLanguage();
 });
+
+// Sprachumschaltung und Laden der Inhalte
+function loadLanguage() {
+    const languageSelector = document.getElementById("languageSelector");
+    let currentLanguage = 'en'; // Standardmäßig auf Deutsch
+
+    function switchLanguage(language) {
+        currentLanguage = language;
+        localStorage.setItem("language", currentLanguage);
+        fetchLanguageContent(currentLanguage);
+    }
+
+    function fetchLanguageContent(language) {
+        fetch(`resources/language/dice/1dice${language}.json`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('title').textContent = data.title;
+                document.getElementById('headerTitle').textContent = data.headerTitle;
+                document.getElementById('homeLink').textContent = data.homeLink;
+                document.getElementById('diceLink').textContent = data.diceLink;
+                document.getElementById('randomLink').textContent = data.randomLink;
+                document.getElementById('quizCapitalLink').textContent = data.quizCapitalLink;
+                document.getElementById('quizFlagLink').textContent = data.quizFlagLink;
+                document.getElementById('hangmanLink').textContent = data.hangmanLink;
+                document.getElementById('show-modal-dice-checkbox').textContent = data.showmodaldicecheckbox;
+                document.getElementById('rollDiceButton').textContent = data.rollDiceButton;
+                document.getElementById('modalTitle').textContent = data.modalTitle;
+                document.getElementById('modalOkButton').textContent = data.modalOkButton;
+            });
+    }
+
+    // Sprachumschaltung
+    languageSelector.addEventListener("change", function() {
+        const selectedLanguage = this.value;
+        switchLanguage(selectedLanguage);
+    });
+
+    // Gespeicherte Sprache laden
+    const savedLanguage = localStorage.getItem("language");
+    if (savedLanguage) {
+        currentLanguage = savedLanguage;
+        languageSelector.value = currentLanguage;
+    }
+    fetchLanguageContent(currentLanguage);
+}

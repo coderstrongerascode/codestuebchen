@@ -1,31 +1,34 @@
-<!-- dice.html -->
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Würfelseite</title>
+    <title id="title">Würfelseite</title>
     <link rel="stylesheet" href="styles/stylesDice.css">
-	<link rel="icon" href="/resources/icon/IconDice4.png" type="image/x-icon">
+    <link rel="icon" href="/resources/icon/IconDice4.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Würfelseite</h1>
+        <h1 id="headerTitle">Würfelseite</h1>
         <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+        <div class="language-selector">
+            <label for="languageSelector" id="languageLabel">Sprache auswählen:</label>
+            <select id="languageSelector">
+                <option value="en">English</option>
+                <option value="de">Deutsch</option>
+            </select>
     </header>
     <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Home</a>
-        <a href="dice.html">Würfelseite</a>
-        <a href="random.html">Zufallszahlseite</a>
+        <a id="homeLink" href="index.html">Home</a>
+        <a id="diceLink" href="dice.html">Würfelseite</a>
+        <a id="randomLink" href="random.html">Zufallszahlseite</a>
         <a href="javascript:void(0)" onclick="toggleQuizMenu()">Alle Quizze <span class="arrow">&#9662;</span></a>
         <div id="quizMenu" class="submenu">
-            <a href="quizHauptstadt.html">  Hauptstädte erraten</a>
-            <a href="quizFlagge.html">  Land erraten, aus Flagge</a>
+            <a id="quizCapitalLink" href="quizHauptstadt.html">Hauptstädte erraten</a>
+            <a id="quizFlagLink" href="quizFlagge.html">Land erraten, aus Flagge</a>
         </div>
-		<a href="quizHauptstadt.html">Hauptstädte erraten</a>
-        <a href="quizFlagge.html">Land erraten, aus Flagge</a>
-        <a href="hangman.html">Hangman</a>
+        <a id="hangmanLink" href="hangman.html">Hangman</a>
     </nav>
     <main>
         <div id="dice-container">
@@ -69,15 +72,16 @@
         <div>
             <input type="checkbox" id="show-modal-dice-checkbox"> <label for="show-modal-dice-checkbox">Würfelergebnis im Modal anzeigen</label>
         </div>
-        <button onclick="rollDice()">Würfeln</button>
-    </main>
 
-    <!-- Modal für den Würfel -->
-    <div id="diceModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Würfelergebnis</h2>
-            <div id="dice-modal-container">
+    < <button id="rollDiceButton" onclick="rollDice()">Würfeln</button>
+</main>
+
+<!-- Modal für den Würfel -->
+<div id="diceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Würfelergebnis</h2>
+        <div id="dice-modal-container">
                 <!-- Den Würfel im Modal einfügen -->
                 <div class="dice" id="modal-dice">
                     <!-- Jede Seite des Würfels -->
@@ -116,7 +120,7 @@
                     </div>
                 </div>
             </div>
-            <button class="ok-button" onclick="closeModal()">OK</button>
+            <button class="ok-button" id="modalOkButton" onclick="closeModal()">OK</button>
         </div>
     </div>
 

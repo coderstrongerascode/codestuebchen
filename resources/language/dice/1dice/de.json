@@ -1,0 +1,16 @@
+{
+    "title": "Würfelseite",
+    "headerTitle": "Würfelseite",
+    "languageLabel": "Sprache auswählen:",
+    "homeLink": "Home",
+    "diceLink": "Würfelseite",
+    "randomLink": "Zufallszahlseite",
+    "allQuizzesLink": "Alle Quizze",
+    "quizCapitalLink": "Hauptstädte erraten",
+    "quizFlagLink": "Land erraten, aus Flagge",
+    "hangmanLink": "Hangman",
+    "showmodaldicecheckbox": "Würfelergebnis im Modal anzeigen",
+    "rollDiceButton": "Würfeln",
+    "modalTitle": "Würfelergebnis",
+    "modalOkButton": "OK"
+}

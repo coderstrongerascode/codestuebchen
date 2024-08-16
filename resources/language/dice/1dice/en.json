@@ -1,0 +1,16 @@
+{
+    "title": "Dice Page",
+    "headerTitle": "Dice Page",
+    "languageLabel": "Select Language:",
+    "homeLink": "Home",
+    "diceLink": "Dice Page",
+    "randomLink": "Random Number Page",
+    "allQuizzesLink": "All Quizzes",
+    "quizCapitalLink": "Guess the Capitals",
+    "quizFlagLink": "Guess the Country from the Flag",
+    "hangmanLink": "Hangman",
+    "showmodaldicecheckbox": "Show dice result in modal",
+    "rollDiceButton": "Roll Dice",
+    "modalTitle": "Dice Result",
+    "modalOkButton": "OK"
+}

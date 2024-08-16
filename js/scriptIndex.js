@@ -72,7 +72,7 @@ function loadLanguage() {
     }
 
     function fetchLanguageContent(language) {
-        fetch(`resources/language/${language}.json`)
+        fetch(`resources/language/index/${language}.json`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById("pageTitle").textContent = data.pageTitle;
