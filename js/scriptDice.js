@@ -21,7 +21,7 @@ function closeNav() {
 
 // Funktion zum Ein- und Ausklappen des Quiz-Menüs
 function toggleQuizMenu() {
-    var quizMenu = document.getElementById("allQuizzesLink");
+    var quizMenu = document.getElementById("quizMenu");
     var arrow = document.querySelector('.arrow');
     if (quizMenu.style.display === "block") {
         quizMenu.style.display = "none";
@@ -104,7 +104,7 @@ function loadLanguage() {
             .then(data => {
                 document.getElementById('title').textContent = data.title;
                 document.getElementById('headerTitle').textContent = data.headerTitle;
-                document.getElementById("languageLabel").textContent = data.languageLabel;
+                document.getElementById('languageLabel').textContent = data.languageLabel;
                 document.getElementById('homeLink').textContent = data.homeLink;
                 document.getElementById('diceLink').textContent = data.diceLink;
                 document.getElementById('randomLink').textContent = data.randomLink;
