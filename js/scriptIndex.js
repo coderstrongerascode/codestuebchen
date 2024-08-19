@@ -19,15 +19,15 @@ function closeNav() {
     body.classList.remove("menu-open");
 }
 
-// Funktion zum Ein- und Ausklappen des Quiz-Menüs
+// Funktion zum Ein- und Ausklappen des Würfels-Menüs
 function toggleDiceMenu() {
-    var quizMenu = document.getElementById("DiceMenu");
+    var diceMenu = document.getElementById("DiceMenu");
     var arrow = document.querySelector('.arrow');
-    if (quizMenu.style.display === "block") {
-        quizMenu.style.display = "none";
+    if (diceMenu.style.display === "block") {
+        diceMenu.style.display = "none";
         arrow.classList.remove('down');
     } else {
-        quizMenu.style.display = "block";
+        diceMenu.style.display = "block";
         arrow.classList.add('down');
     }
 }
