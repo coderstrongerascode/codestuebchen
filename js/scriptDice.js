@@ -92,7 +92,7 @@ function rollDice() {
 
     // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf der Hauptseite)
     modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;*/
-    dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
+    //dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
     // Warten, bis die Transition des Würfels endet, bevor das Modal angezeigt wird
     /*if (showInModal) {
         dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
