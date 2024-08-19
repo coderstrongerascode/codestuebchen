@@ -73,7 +73,7 @@ function rollDice() {
         const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
 
         // Setze die Rotation für den Würfel auf der Hauptseite
-        dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
+        dice.style.transition = 'transform 10s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
         dice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
 
         // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf de r Hauptseite)
