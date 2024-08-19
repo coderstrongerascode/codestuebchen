@@ -43,69 +43,37 @@ function closeModal() {
 }
 
 
-function getRandomNumber(min, max) {
-    let previousNumber = null;
-    let randomNumber;
-    do {
-        randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    } while (randomNumber === previousNumber);
-    
-    previousNumber = randomNumber;
-    return randomNumber;
-}
-
-
-
-
-
 // Funktion zum Würfeln und den Würfel im Modalen Fenster anzeigen
 function rollDice() {
     const dice = document.getElementById('dice');
     const modalDice = document.getElementById('modal-dice');
     const showInModal = document.getElementById('showmodaldicecheckbox').checked; // Neue Checkbox
 
-    let randomNumber = getRandomNumber(4,9)
 
-    for (let i = 0; i <randomNumber ; i++)
-    {
-        
-        const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
-        const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
-        const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
-
-        // Setze die Rotation für den Würfel auf der Hauptseite
-        dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
-        dice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
-        showModalAfterTransition();
-        // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf de r Hauptseite)
-        //modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
-        console.log(i);
-    }
-
-    //Math.random() * (max - min) + min;
+    Math.random() * (max - min) + min;
     // Zufällige Rotation für den Würfel
-    /*const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+    const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
     const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
-    const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten*/
+    const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
 
     // Setze die Rotation für den Würfel auf der Hauptseite
-    /*dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
+    dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
     dice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
 
     // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf der Hauptseite)
-    modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;*/
+    modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
     //dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
     // Warten, bis die Transition des Würfels endet, bevor das Modal angezeigt wird
-    /*if (showInModal) {
+    if (showInModal) {
         dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
-    } */
+    }
 }
 
 // Funktion, um das Modal nach Abschluss der Transition anzuzeigen
 function showModalAfterTransition() {
     // Kurze Verzögerung, um sicherzustellen, dass die Transition abgeschlossen ist
     setTimeout(() => {
-        //openModal();
+    openModal();
     }, 50);
 }
 
