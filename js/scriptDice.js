@@ -68,6 +68,7 @@ function rollDice() {
 
     for (let i = 0; i <randomNumber ; i++)
     {
+        
         const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
         const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
         const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
@@ -78,6 +79,7 @@ function rollDice() {
 
         // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf de r Hauptseite)
         modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
+        console.log(i);
     }
 
     //Math.random() * (max - min) + min;
