@@ -69,6 +69,15 @@ function rollDice() {
     for (let i = 0; i <randomNumber ; i++)
     {
         const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+        const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+        const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+
+        // Setze die Rotation für den Würfel auf der Hauptseite
+        dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
+        dice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
+
+        // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf de r Hauptseite)
+        modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
     }
 
     //Math.random() * (max - min) + min;
@@ -78,11 +87,11 @@ function rollDice() {
     const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten*/
 
     // Setze die Rotation für den Würfel auf der Hauptseite
-    dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
+    /*dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
     dice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
 
     // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf der Hauptseite)
-    modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
+    modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;*/
 
     // Warten, bis die Transition des Würfels endet, bevor das Modal angezeigt wird
     if (showInModal) {
