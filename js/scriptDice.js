@@ -71,7 +71,7 @@ function rollDice() {
         const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
     }
 
-    Math.random() * (max - min) + min;
+    //Math.random() * (max - min) + min;
     // Zufällige Rotation für den Würfel
     /*const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
     const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
