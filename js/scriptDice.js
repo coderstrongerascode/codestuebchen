@@ -41,16 +41,41 @@ function openModal() {
 function closeModal() {
     document.getElementById('diceModal').style.display = 'none';
 }
+
+
+function getRandomNumber(min, max) {
+    let previousNumber = null;
+    let randomNumber;
+    do {
+        randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    } while (randomNumber === previousNumber);
+    
+    previousNumber = randomNumber;
+    return randomNumber;
+}
+
+
+
+
+
 // Funktion zum Würfeln und den Würfel im Modalen Fenster anzeigen
 function rollDice() {
     const dice = document.getElementById('dice');
     const modalDice = document.getElementById('modal-dice');
     const showInModal = document.getElementById('showmodaldicecheckbox').checked; // Neue Checkbox
 
+    let randomNumber = getRandomNumber(4,9)
+
+    for (let i = 0; i <randomNumber ; i++)
+    {
+        const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+    }
+
+    Math.random() * (max - min) + min;
     // Zufällige Rotation für den Würfel
-    const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+    /*const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
     const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
-    const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
+    const randomZ = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten*/
 
     // Setze die Rotation für den Würfel auf der Hauptseite
     dice.style.transition = 'transform 1s cubic-bezier(0.17, 0.67, 0.83, 0.67)'; // Animationseffekt
