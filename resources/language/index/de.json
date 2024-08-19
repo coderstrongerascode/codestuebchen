@@ -11,5 +11,7 @@
     "welcomeMessage": "Herzlich Willkommen User.",
     "description": "Hier können Sie sich mit Zufallszahlen sowie Standard-Würfeln austoben.",
     "toDicePage": "Zur Würfelseite",
-    "toRandomPage": "Zur Zufallszahlenseite"
+    "toRandomPage": "Zur Zufallszahlenseite",
+    "DiceMenu": "Würfelmenü",
+    "threeDiceLink": "Bestimme die Reihenfolge von 3 (Würfeln)"
 }
