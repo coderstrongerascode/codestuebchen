@@ -41,16 +41,12 @@ function openModal() {
 function closeModal() {
     document.getElementById('diceModal').style.display = 'none';
 }
-
-
 // Funktion zum Würfeln und den Würfel im Modalen Fenster anzeigen
 function rollDice() {
     const dice = document.getElementById('dice');
     const modalDice = document.getElementById('modal-dice');
     const showInModal = document.getElementById('showmodaldicecheckbox').checked; // Neue Checkbox
 
-
-    Math.random() * (max - min) + min;
     // Zufällige Rotation für den Würfel
     const randomX = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
     const randomY = Math.floor(Math.random() * 4) * 90; // Begrenzung auf 90 Grad Schritten
@@ -62,18 +58,18 @@ function rollDice() {
 
     // Setze die Rotation für den Würfel im Modal (gleiche Rotation wie auf der Hauptseite)
     modalDice.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg) rotateZ(${randomZ}deg)`;
-    //dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
+
     // Warten, bis die Transition des Würfels endet, bevor das Modal angezeigt wird
     if (showInModal) {
         dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
-    }
+    } 
 }
 
 // Funktion, um das Modal nach Abschluss der Transition anzuzeigen
 function showModalAfterTransition() {
     // Kurze Verzögerung, um sicherzustellen, dass die Transition abgeschlossen ist
     setTimeout(() => {
-    openModal();
+        openModal();
     }, 50);
 }
 
