@@ -20,6 +20,19 @@ function closeNav() {
 }
 
 // Funktion zum Ein- und Ausklappen des Quiz-Menüs
+function toggleDiceMenu() {
+    var quizMenu = document.getElementById("DiceMenu");
+    var arrow = document.querySelector('.arrow');
+    if (quizMenu.style.display === "block") {
+        quizMenu.style.display = "none";
+        arrow.classList.remove('down');
+    } else {
+        quizMenu.style.display = "block";
+        arrow.classList.add('down');
+    }
+}
+
+// Funktion zum Ein- und Ausklappen des Quiz-Menüs
 function toggleQuizMenu() {
     var quizMenu = document.getElementById("quizMenu");
     var arrow = document.querySelector('.arrow');
