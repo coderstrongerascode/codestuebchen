@@ -102,7 +102,7 @@ function loadLanguage() {
                 document.getElementById("toDicePage").textContent = data.toDicePage;
                 document.getElementById("toRandomPage").textContent = data.toRandomPage;
                 document.getElementById("alldicelink").textContent = data.diceMenu;
-                document.getElementById("threediceLink").textContent = data.threeDiceLink
+                document.getElementById("threediceLink").textContent = data.threeDiceLink;
 
             });
     }
