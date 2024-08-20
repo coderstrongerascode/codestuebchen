@@ -45,6 +45,7 @@ function toggleQuizMenu() {
     }
 }
 
+document.querySelector('[onclick="toggleDiceMenu()"]').addEventListener('click', toggleDiceMenu);
 // Funktion zum Laden eines zufälligen Bildes
 document.addEventListener('DOMContentLoaded', () => {
     // Array mit den Bild-Dateinamen
