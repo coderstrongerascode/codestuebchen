@@ -39,11 +39,10 @@ function toggleDiceMenu() {
     if (diceMenu.style.display === "block") {
         diceMenu.style.display = "none";
         arrow.classList.remove('down');
-        label.style.display = "inline"; // Sicherstellen, dass das Label sichtbar ist
     } else {
         diceMenu.style.display = "block";
         arrow.classList.add('down');
-        label.style.display = "inline"; // Sicherstellen, dass das Label sichtbar ist
+    
     }
 }
 
