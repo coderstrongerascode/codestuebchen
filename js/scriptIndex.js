@@ -60,9 +60,15 @@ function toggleQuizMenu() {
     }
 }
 
-document.querySelector('[onclick="toggleDiceMenu()"]').addEventListener('click', toggleDiceMenu);
+
 // Funktion zum Laden eines zufälligen Bildes
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Event-Listener für das Würfel-Menü
+    document.getElementById('toggleDiceMenuLink').addEventListener('click', function() {
+        toggleDiceMenu();
+    });
+
     // Array mit den Bild-Dateinamen
     const images = [
         'resources/images/pic_1.png',
