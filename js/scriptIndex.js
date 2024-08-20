@@ -34,7 +34,7 @@ function closeNav() {
 function toggleDiceMenu() {
     var diceMenu = document.getElementById("diceMenu");
     var arrow = document.querySelector('#alldicelink + .arrow');
-    var label = document.getElementById("alldicelink"); // Stelle sicher, dass das Label existiert
+    //var label = document.getElementById("alldicelink"); // Stelle sicher, dass das Label existiert
 
     if (diceMenu.style.display === "block") {
         diceMenu.style.display = "none";
@@ -124,6 +124,7 @@ function loadLanguage() {
                 document.getElementById("toDicePage").textContent = data.toDicePage;
                 document.getElementById("toRandomPage").textContent = data.toRandomPage;
                 document.getElementById("alldicelink").textContent = data.diceMenu;
+                document.getElementById("toggleDiceMenuLink").textContent = data.diceMenu;
                 document.getElementById("threediceLink").textContent = data.threeDiceLink;
 
             });
