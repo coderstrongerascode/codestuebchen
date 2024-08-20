@@ -20,7 +20,7 @@ function closeNav() {
 }
 
 // Funktion zum Ein- und Ausklappen des Würfels-Menüs
-function toggleDiceMenu() {
+/*function toggleDiceMenu() {
     var diceMenu = document.getElementById("diceMenu");
     var arrow = document.querySelector('#alldicelink + .arrow');
     if (diceMenu.style.display === "block") {
@@ -29,6 +29,21 @@ function toggleDiceMenu() {
     } else {
         diceMenu.style.display = "block";
         arrow.classList.add('down');
+    }
+}*/
+function toggleDiceMenu() {
+    var diceMenu = document.getElementById("diceMenu");
+    var arrow = document.querySelector('#alldicelink + .arrow');
+    var label = document.getElementById("alldicelink"); // Stelle sicher, dass das Label existiert
+
+    if (diceMenu.style.display === "block") {
+        diceMenu.style.display = "none";
+        arrow.classList.remove('down');
+        label.style.display = "inline"; // Sicherstellen, dass das Label sichtbar ist
+    } else {
+        diceMenu.style.display = "block";
+        arrow.classList.add('down');
+        label.style.display = "inline"; // Sicherstellen, dass das Label sichtbar ist
     }
 }
 

@@ -17,28 +17,7 @@ header {
     position: relative;
 }
 
-/* Untermenü für dice */
-.submenudice {
-    display: none;
-    flex-direction: column;
-    padding-left: 20px; /* Indent the submenu items */
-}
 
-.sidenav .submenudice a {
-    font-size: 18px;
-}
-
-/* Arrow Icon for collapsible menu */
-.arrowdice {
-    font-size: 16px;
-    margin-left: 10px;
-    transition: transform 0.3s;
-}
-
-/* Pfeil nach unten (Standardzustand) */
-.arrowdice.down {
-    transform: rotate(90deg);
-}
 
 .menu-icon {
     font-size: 24px;
@@ -103,6 +82,12 @@ header {
     transform: rotate(90deg);
 }
 
+#alldicelink {
+    display: inline; /* Sollte nicht auf 'none' gesetzt sein */
+    visibility: visible; /* Sollte nicht auf 'hidden' gesetzt sein */
+    display: inline; /* Stelle sicher, dass das Label angezeigt wird */
+    color: #e21515; /* Stelle sicher, dass die Farbe des Labels sichtbar ist */
+}
 /* Hauptinhalt */
 main {
     margin-left: 0;
