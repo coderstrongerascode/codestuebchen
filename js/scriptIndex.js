@@ -21,7 +21,7 @@ function closeNav() {
 
 // Funktion zum Ein- und Ausklappen des Würfels-Menüs
 function toggleDiceMenu() {
-    var diceMenu = document.getElementById("DiceMenu");
+    var diceMenu = document.getElementById("diceMenu");
     var arrow = document.querySelector('.arrow');
     if (diceMenu.style.display === "block") {
         diceMenu.style.display = "none";
