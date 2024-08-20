@@ -22,7 +22,7 @@ function closeNav() {
 // Funktion zum Ein- und Ausklappen des Würfels-Menüs
 function toggleDiceMenu() {
     var diceMenu = document.getElementById("diceMenu");
-    var arrow = document.querySelector('.arrow');
+    var arrow = document.querySelector('#alldicelink + .arrow');
     if (diceMenu.style.display === "block") {
         diceMenu.style.display = "none";
         arrow.classList.remove('down');
@@ -35,7 +35,7 @@ function toggleDiceMenu() {
 // Funktion zum Ein- und Ausklappen des Quiz-Menüs
 function toggleQuizMenu() {
     var quizMenu = document.getElementById("quizMenu");
-    var arrow = document.querySelector('.arrow');
+    var arrow = document.querySelector('#allQuizzesLink + .arrow');
     if (quizMenu.style.display === "block") {
         quizMenu.style.display = "none";
         arrow.classList.remove('down');
