@@ -122,7 +122,8 @@ function loadLanguage() {
                 document.getElementById("description").textContent = data.description;
                 document.getElementById("toDicePage").textContent = data.toDicePage;
                 document.getElementById("toRandomPage").textContent = data.toRandomPage;
-                document.getElementById("alldicelink").textContent = data.diceMenu;
+                document.getElementById("dicepage").textContent = data.dicemenulink
+                //document.getElementById("alldicelink").textContent = data.diceMenu;
                
                 document.getElementById("threediceLink").textContent = data.threeDiceLink;
 
