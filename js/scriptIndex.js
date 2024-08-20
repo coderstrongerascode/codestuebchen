@@ -31,9 +31,9 @@ function closeNav() {
         arrow.classList.add('down');
     }
 }*/
-function toggleDiceMenu() {
+function toggleDiceMenuLink() {
     var diceMenu = document.getElementById("diceMenu");
-    var arrow = document.querySelector('#alldicelink + .arrow');
+    var arrow = document.querySelector('.arrow');
     //var label = document.getElementById("alldicelink"); // Stelle sicher, dass das Label existiert
 
     if (diceMenu.style.display === "block") {
@@ -49,7 +49,7 @@ function toggleDiceMenu() {
 // Funktion zum Ein- und Ausklappen des Quiz-Menüs
 function toggleQuizMenu() {
     var quizMenu = document.getElementById("quizMenu");
-    var arrow = document.querySelector('#allQuizzesLink + .arrow');
+    var arrow = document.querySelector('.arrow');
     if (quizMenu.style.display === "block") {
         quizMenu.style.display = "none";
         arrow.classList.remove('down');
@@ -64,9 +64,9 @@ function toggleQuizMenu() {
 document.addEventListener('DOMContentLoaded', () => {
 
     // Event-Listener für das Würfel-Menü
-    document.getElementById('toggleDiceMenuLink').addEventListener('click', function() {
+   /* document.getElementById('toggleDiceMenuLink').addEventListener('click', function() {
         toggleDiceMenu();
-    });
+    });*/
 
     // Array mit den Bild-Dateinamen
     const images = [
