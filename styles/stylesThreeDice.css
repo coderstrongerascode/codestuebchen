@@ -1,0 +1,126 @@
+/* Grundlegende Stile für die Seite */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+    transition: margin-left 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+/* Vertikale Navigation */
+.sidenav {
+    display: none;
+    background-color: #111;
+    overflow-x: hidden;
+    color: #fff;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: 0.3s;
+    flex-direction: column; /* Ensure vertical stacking */
+}
+
+.sidenav a {
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+    width: 100%; /* Ensure full width */
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Untermenü für Quizze */
+.submenu {
+    display: none;
+    flex-direction: column;
+    padding-left: 20px; /* Indent the submenu items */
+}
+
+.sidenav .submenu a {
+    font-size: 18px;
+}
+
+/* Arrow Icon for collapsible menu */
+.arrow {
+    font-size: 16px;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+/* Pfeil nach unten (Standardzustand) */
+.arrow.down {
+    transform: rotate(90deg);
+}
+
+#alldicelink {
+    display: inline; /* Sollte nicht auf 'none' gesetzt sein */
+    visibility: visible; /* Sollte nicht auf 'hidden' gesetzt sein */
+    display: inline; /* Stelle sicher, dass das Label angezeigt wird */
+    color: #e21515; /* Stelle sicher, dass die Farbe des Labels sichtbar ist */
+}
+/* Hauptinhalt */
+main {
+    margin-left: 0;
+    padding: 16px;
+    transition: margin-left 0.3s;
+    color: #000;
+}
+
+main h2, main p, main img, main a {
+    text-align: left;
+}
+
+/* Responsive Anpassungen */
+@media screen and (max-width: 600px) {
+    .sidenav {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .sidenav a {
+        float: left;
+        padding: 15px;
+    }
+    main {
+        margin-left: 0;
+    }
+}
+
+/* Menü geöffnet */
+body.menu-open .sidenav {
+    display: block;
+}
+
+body.menu-open main {
+    margin-left: 250px;
+}
