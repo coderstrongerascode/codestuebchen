@@ -151,8 +151,6 @@ function loadLanguage() {
                 document.getElementById('rollDiceButton').textContent = data.rollDiceButton;
                 document.getElementById('modalTitle').textContent = data.modalTitle;
                 document.getElementById('modalOkButton').textContent = data.modalOkButton;
-                document.getElementById("toDicePage").textContent = data.toDicePage;
-                document.getElementById("toRandomPage").textContent = data.toRandomPage;
                 document.getElementById("dicepage").textContent = data.dicemenulink             
                 document.getElementById("threediceLink").textContent = data.threeDiceLink;
             });

@@ -10,7 +10,10 @@
     "hangmanLink": "Hangman",
     "showmodaldicecheckbox": "Würfelergebnis im Modal anzeigen",
     "rollDiceButton": "Würfeln",
+    "toDicePage": "Würfelmenü",
     "modalTitle": "Würfelergebnis",
     "modalOkButton": "OK",
-    "headerTitle": "Würfelseite"
+    "headerTitle": "Würfelseite",
+    "threeDiceLink": "Bestimme die Reihenfolge von 3 (Würfeln)",
+    "dicemenulink": "Würfelmenue"
 }
