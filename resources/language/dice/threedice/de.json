@@ -11,5 +11,6 @@
     "showmodaldicecheckbox": "Würfelergebnis im Modal anzeigen",
     "rollDiceButton": "Würfeln",
     "modalTitle": "Würfelergebnis",
-    "modalOkButton": "OK"
+    "modalOkButton": "OK",
+    "headerTitle": "Würfelseite"
 }
