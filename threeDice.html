@@ -40,16 +40,99 @@
         <a href="quizFlagge.html" id="quizFlagLink">Land erraten, aus Flagge</a>
         <a href="hangman.html" id="hangmanLink">Hangman</a>
     </nav>
-    <main id="mainContent">
-        <h2 id="welcomeMessage">Herzlich Willkommen User.</h2>
-        <p id="description">Hier können Sie sich mit Zufallszahlen sowie Standard-Würfeln austoben.</p>
-        <img id="randomImage" src="" alt="Zufälliges Bild">
-        
-        <h2 id="toDicePage">Zur Würfelseite</h2>
-        <a href="dice.html" id="dicePageLink">Würfelseite</a>
-        <h2 id="toRandomPage">Zur Zufallszahlenseite</h2>
-        <a href="random.html" id="randomPageLink">Zufallszahlseite</a>
-    </main>
+    <main>
+        <div id="dice-container">
+            <div class="dice" id="dice">
+                <!-- Jede Seite des Würfels -->
+                <div class="face one">
+                    <div class="pip pip1"></div>
+                </div>
+                <div class="face two">
+                    <div class="pip pip1"></div>
+                    <div class="pip pip2"></div>
+                </div>
+                <div class="face three">
+                    <div class="pip pip1"></div>
+                    <div class="pip pip2"></div>
+                    <div class="pip pip3"></div>
+                </div>
+                <div class="face four">
+                    <div class="pip pip1"></div>
+                    <div class="pip pip2"></div>
+                    <div class="pip pip3"></div>
+                    <div class="pip pip4"></div>
+                </div>
+                <div class="face five">
+                    <div class="pip pip1"></div>
+                    <div class="pip pip2"></div>
+                    <div class="pip pip3"></div>
+                    <div class="pip pip4"></div>
+                    <div class="pip pip5"></div>
+                </div>
+                <div class="face six">
+                    <div class="pip pip1"></div>
+                    <div class="pip pip2"></div>
+                    <div class="pip pip3"></div>
+                    <div class="pip pip4"></div>
+                    <div class="pip pip5"></div>
+                    <div class="pip pip6"></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <input type="checkbox" id="showmodaldicecheckbox"> <a id="showmodaldicecheckboxlabel"></a>
+        </div>
+
+     <button id="rollDiceButton" onclick="rollDice()">Würfeln</button>
+</main>
+
+<!-- Modal für den Würfel -->
+<div id="diceModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Würfelergebnis</h2>
+        <div id="dice-modal-container">
+                <!-- Den Würfel im Modal einfügen -->
+                <div class="dice" id="modal-dice">
+                    <!-- Jede Seite des Würfels -->
+                    <div class="face one">
+                        <div class="pip pip1"></div>
+                    </div>
+                    <div class="face two">
+                        <div class="pip pip1"></div>
+                        <div class="pip pip2"></div>
+                    </div>
+                    <div class="face three">
+                        <div class="pip pip1"></div>
+                        <div class="pip pip2"></div>
+                        <div class="pip pip3"></div>
+                    </div>
+                    <div class="face four">
+                        <div class="pip pip1"></div>
+                        <div class="pip pip2"></div>
+                        <div class="pip pip3"></div>
+                        <div class="pip pip4"></div>
+                    </div>
+                    <div class="face five">
+                        <div class="pip pip1"></div>
+                        <div class="pip pip2"></div>
+                        <div class="pip pip3"></div>
+                        <div class="pip pip4"></div>
+                        <div class="pip pip5"></div>
+                    </div>
+                    <div class="face six">
+                        <div class="pip pip1"></div>
+                        <div class="pip pip2"></div>
+                        <div class="pip pip3"></div>
+                        <div class="pip pip4"></div>
+                        <div class="pip pip5"></div>
+                        <div class="pip pip6"></div>
+                    </div>
+                </div>
+            </div>
+            <button class="ok-button" id="modalOkButton" onclick="closeModal()">OK</button>
+        </div>
+    </div>
     <script src="js/scriptThreeDice.js"></script>
 </body>
 </html>
