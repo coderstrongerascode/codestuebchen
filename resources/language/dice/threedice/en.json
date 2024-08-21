@@ -10,6 +10,7 @@
     "hangmanLink": "Hangman",
     "welcomeMessage": "Welcome User.",
     "description": "Here you can play with random numbers and standard dice.",
+    "showmodaldicecheckbox": "Show dice result in modal",
     "toRandomPage": "To Random Number Page",
     "threeDiceLink": "Determine the sequence of 3 (Dice)",
     "dicemenulink": "DiceMenu",
