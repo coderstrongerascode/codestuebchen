@@ -138,7 +138,7 @@ function loadLanguage() {
         fetch(`resources/language/dice/threedice/${language}.json`)
             .then(response => response.json())
             .then(data => {
-                document.getElementById('pageTitle').textContent = data.pageTitleitle;
+                document.getElementById('pageTitle').textContent = data.pageTitle;
                 document.getElementById('languageLabel').textContent = data.languageLabel;
                 document.getElementById('homeLink').textContent = data.homeLink;
                 document.getElementById('diceLink').textContent = data.diceLink;

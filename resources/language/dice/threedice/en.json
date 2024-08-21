@@ -12,5 +12,8 @@
     "description": "Here you can play with random numbers and standard dice.",
     "showmodaldicecheckbox": "Show dice result in modal",
     "threeDiceLink": "Determine the sequence of 3 (Dice)",
-    "dicemenulink": "DiceMenu"
+    "dicemenulink": "DiceMenu",
+    "rollDiceButton": "Roll Dice",
+    "modalTitle": "Dice Result",
+    "modalOkButton": "OK"
 }
