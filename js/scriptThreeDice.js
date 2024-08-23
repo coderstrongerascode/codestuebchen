@@ -71,6 +71,9 @@ function closeModal() {
 }
 // Funktion zum Würfeln und den Würfel im Modalen Fenster anzeigen
 function rollDice() {
+    document.getElementById("face1-symbol1").innerText = document.getElementById("symbol1").value || "A";
+            document.getElementById("face1-symbol2").innerText = document.getElementById("symbol2").value || "B";
+            document.getElementById("face1-symbol3").innerText = document.getElementById("symbol3").value || "C";
     const dice = document.getElementById('dice');
     const modalDice = document.getElementById('modal-dice');
     const showInModal = document.getElementById('showmodaldicecheckbox').checked; // Neue Checkbox
