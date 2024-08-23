@@ -71,6 +71,7 @@ function closeModal() {
 }
 // Funktion zum Würfeln und den Würfel im Modalen Fenster anzeigen
 function rollDice() {
+    setFace();
     document.getElementById("face1-symbol1").innerText = document.getElementById("symbol1").value || "A";
             document.getElementById("face1-symbol2").innerText = document.getElementById("symbol2").value || "B";
             document.getElementById("face1-symbol3").innerText = document.getElementById("symbol3").value || "C";
@@ -94,6 +95,40 @@ function rollDice() {
     if (showInModal) {
         dice.addEventListener('transitionend', showModalAfterTransition, { once: true });
     } 
+}
+
+//Set the face of dice
+function setFace()
+{
+    //Face 1
+    document.getElementById("face1-symbol1").innerText = document.getElementById("symbol1").value || "A";
+    document.getElementById("face1-symbol2").innerText = document.getElementById("symbol2").value || "B";
+    document.getElementById("face1-symbol3").innerText = document.getElementById("symbol3").value || "C";
+
+    //Face 2
+    document.getElementById("face2-symbol1").innerText = document.getElementById("symbol1").value || "A";
+    document.getElementById("face2-symbol2").innerText = document.getElementById("symbol3").value || "C";
+    document.getElementById("face2-symbol3").innerText = document.getElementById("symbol2").value || "B";
+
+    //Face 3
+    document.getElementById("face3-symbol1").innerText = document.getElementById("symbol2").value || "B";
+    document.getElementById("face3-symbol2").innerText = document.getElementById("symbol1").value || "A";
+    document.getElementById("face3-symbol3").innerText = document.getElementById("symbol3").value || "C";
+
+    //Face 4
+    document.getElementById("face4-symbol1").innerText = document.getElementById("symbol2").value || "B";
+    document.getElementById("face4-symbol2").innerText = document.getElementById("symbol3").value || "C";
+    document.getElementById("face4-symbol3").innerText = document.getElementById("symbol1").value || "A";
+
+    //Face 5
+    document.getElementById("face5-symbol1").innerText = document.getElementById("symbol3").value || "C";
+    document.getElementById("face5-symbol2").innerText = document.getElementById("symbol1").value || "A";
+    document.getElementById("face5-symbol3").innerText = document.getElementById("symbol2").value || "B";
+
+    //Face 6
+    document.getElementById("face6-symbol1").innerText = document.getElementById("symbol3").value || "C";
+    document.getElementById("face6-symbol2").innerText = document.getElementById("symbol2").value || "B";
+    document.getElementById("face6-symbol3").innerText = document.getElementById("symbol1").value || "A";
 }
 
 // Funktion, um das Modal nach Abschluss der Transition anzuzeigen
