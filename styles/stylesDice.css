@@ -370,6 +370,8 @@ body.menu-open main {
     background-color: #ccc;
     border-radius: 34px;
     cursor: pointer;
+    margin-right: 10px; /* Abstand zwischen Text und Schalter */
+    vertical-align: middle; /* Vertikale Ausrichtung neben dem Schalter */
     transition: background-color 0.4s;
   }
   
