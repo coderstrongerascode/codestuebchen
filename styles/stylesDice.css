@@ -356,36 +356,41 @@ body.menu-open main {
     margin-left: 250px;
 }
 
-/* Stil des Schiebereglers */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
+/* Verstecke das eigentliche Checkbox-Element */
+#showmodaldicecheckbox {
+    display: none;
   }
   
-  .slider:before {
-    position: absolute;
+  /* Stil für das a-Element, das als Schalter verwendet wird */
+  #showmodaldicecheckboxlabel {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    cursor: pointer;
+    transition: background-color 0.4s;
+  }
+  
+  /* Stil für den Schieberegler */
+  #showmodaldicecheckboxlabel::before {
     content: "";
-    height: 26px;
+    position: absolute;
     width: 26px;
+    height: 26px;
     left: 4px;
     bottom: 4px;
     background-color: white;
-    transition: .4s;
     border-radius: 50%;
+    transition: transform 0.4s;
   }
   
-  /* Wenn der Schalter aktiviert ist */
-  input:checked + .slider {
+  /* Wenn das Checkbox-Element aktiviert ist */
+  #showmodaldicecheckbox:checked + #showmodaldicecheckboxlabel {
     background-color: #2196F3;
   }
   
-  input:checked + .slider:before {
+  #showmodaldicecheckbox:checked + #showmodaldicecheckboxlabel::before {
     transform: translateX(26px);
   }
