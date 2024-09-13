@@ -373,6 +373,7 @@ body.menu-open main {
     margin-right: 10px; /* Abstand zwischen Text und Schalter */
     vertical-align: middle; /* Vertikale Ausrichtung neben dem Schalter */
     transition: background-color 0.4s;
+    z-index: 1; /* Stelle sicher, dass das Label nicht überlappt */
 }
 
 /* Stil für den Schieberegler */
@@ -386,6 +387,7 @@ body.menu-open main {
     background-color: white;
     border-radius: 50%;
     transition: transform 0.4s;
+    z-index: 2; /* Der Schieberegler sollte sich über dem Label befinden */
 }
 
 /* Wenn das Checkbox-Element aktiviert ist */
@@ -395,4 +397,9 @@ body.menu-open main {
 
 #showmodaldicecheckbox:checked + #showmodaldicecheckboxlabel::before {
     transform: translateX(26px);
+}
+
+/* Sicherstellen, dass andere UI-Elemente nicht verdeckt werden */
+#otherElement {
+    z-index: 0; /* Der Button oder das UI-Element, das vom Label nicht überlagert werden soll */
 }
