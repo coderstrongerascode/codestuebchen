@@ -370,8 +370,8 @@ body.menu-open main {
     background-color: #ccc;
     border-radius: 34px;
     cursor: pointer;
-    margin-right: 10px; /* Abstand zwischen Text und Schalter */
-    vertical-align: middle; /* Vertikale Ausrichtung neben dem Schalter */
+    margin-right: 1000px; /* Abstand zwischen Text und Schalter */
+    vertical-align: left; /* Vertikale Ausrichtung neben dem Schalter */
     transition: background-color 0.4s;
     z-index: 1; /* Stelle sicher, dass das Label nicht überlappt */
 }
