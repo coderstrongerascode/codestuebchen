@@ -356,7 +356,7 @@ body.menu-open main {
     margin-left: 250px;
 }
 
-//* Verstecke das eigentliche Checkbox-Element */
+/* Verstecke das eigentliche Checkbox-Element */
 #showmodaldicecheckbox {
     display: none;
 }
